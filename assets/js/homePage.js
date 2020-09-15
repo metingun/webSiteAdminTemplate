@@ -69,5 +69,12 @@ function updateHomePage() {
             'newSeasonPic8': inputNewSeasonPic8
         };
 
-    postModel(url+"/homePage/updateData",requestData);
+    if (postModel(url+"/homePage/updateData",requestData).code===200){
+        alert("Değişiklikler kaydedildi...");
+        location.href=""+urlAdminFrontend+"/homePage.html";
+    }
+    else{
+        alert("Hata gerçekleşti !!!");
+    }
+
 }

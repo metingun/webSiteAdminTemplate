@@ -6,11 +6,16 @@ function login() {
         "userName": username,
         "password": password
     };
-
-    if (postModel(url+"/user/login",requestData).data===null){
+    var post=postModel(url+"/user/login",requestData).data;
+    if (post===null){
         alert("Kullanıcı Adı Veya Şifre Hatalı");
     }
     else{
+        document.cookie = "username="+post.userName+"; path=/; max-age="+60*60*60*2+";";
+        document.cookie = "password="+post.password+"; path=/; max-age="+60*60*60*2+";";
+
         location.href=""+urlAdminFrontend+"/index.html";
+
+        document.cookie = "token="+post.session+"; path=/; max-age="+60*60*60*2+";";
     }
 }

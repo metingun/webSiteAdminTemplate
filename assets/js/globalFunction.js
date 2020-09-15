@@ -61,13 +61,34 @@ function getValueById(id) {
     return document.getElementById(id).value;
 }
 
-function getSession() {
-    return getModel(url+"/user/getSession").data;
+function sessionControl() {
+    var username=getCookie("username");
+    var password=getCookie("password");
+
+    var requestData={
+        "userName": username,
+        "password": password
+    };
+    var post=postModel(url+"/user/login",requestData).data;
+    if (post===null){
+        location.href=""+urlAdminFrontend+"/login.html";
+    }
+    else{
+        return post.session;
+    }
 }
 
-function sessionActivity(session) {
-    var requestData={
-        "session": session
-    };
-    postModel(url+"/user/sessionChange",requestData)
+function getCookie(cookie) {
+    var name = cookie + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)===' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
 }

@@ -36,5 +36,10 @@ function updateAboutUsPage() {
         'visionSpeak': inputVisionSpeak
     };
 
-    postModel(url+"/aboutUs/updateData",requestData);
+    if (postModel(url+"/aboutUs/updateData",requestData).code===200){
+        alert("Değişiklikler kaydedildi...");
+        location.href=""+urlAdminFrontend+"/about.html";
+    } else {
+        alert("Hata gerçekleşti !!!");
+    }
 }

@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta content="Start your development with a Dashboard for Bootstrap 4." name="description">
     <meta content="Creative Tim" name="author">
-    <title>Referanslar</title>
+    <title>Üretim</title>
     <!-- Favicon -->
     <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="referances.html">
+                        <a class="nav-link" href="referances.html">
                             <i class="ni ni-atom text-black-50"></i>
                             <span class="nav-link-text">Referanslar</span>
                         </a>
@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">
+                        <a class="nav-link active" href="product.html">
                             <i class="ni ni-shop text-orange"></i>
                             <span class="nav-link-text">Üretim</span>
                         </a>
@@ -113,7 +113,7 @@
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                             <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Referanslar</a></li>
+                            <li class="breadcrumb-item"><a href="#">Üretim</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -166,20 +166,20 @@
         </div>
     </div>
     <!-- Page content -->
-    <div class="container-fluid mt--6" data-value="3" id="header111x">
+    <div class="container-fluid mt--6" data-value="6" id="header111x">
         <div class="row justify-content-center">
             <div class=" col ">
                 <div class="card">
                     <div class="row align-items-center"
                          style="margin-top:3%;margin-left: 4%;font-size: large; font-weight: bold;padding-bottom: 2%;">
-                        YENİ REFERANS EKLE
+                        YENİ ÜRETİM FOTOĞRAFI EKLE
                     </div>
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush" style="border: solid;">
                             <thead class="thead-light">
                             <tr>
                                 <th class="sort" data-sort="budget" scope="col">GÖRSEL</th>
-                                <th class="sort" data-sort="status" scope="col">FİRMA ADI</th>
+                                <th class="sort" data-sort="status" scope="col">ÜRETİM BAŞLIĞI</th>
                                 <th scope="col">AÇIKLAMA</th>
                             </tr>
                             </thead>
@@ -190,7 +190,7 @@
                                 </td>
 
                                 <td class="budget">
-                                    <input class="d-flex align-items-center newProperty" id="inputCompanyName"/>
+                                    <input class="d-flex align-items-center newProperty" id="inputProductTitle"/>
                                 </td>
 
                                 <td>
@@ -202,8 +202,8 @@
                         </table>
                     </div>
                     <div class="row align-items-center" style="    padding-bottom: 6%;padding-top: 2%;">
-                        <button class="btn-primary addProductButton" onclick="createReferance();"><i
-                                class="fa fa-plus"></i> Referansı Ekle
+                        <button class="btn-primary addProductButton" onclick="createProduct();"><i
+                                class="fa fa-plus"></i> Üretim Fotoğrafı Ekle
                         </button>
                     </div>
                     <div class="card-body">
@@ -213,7 +213,7 @@
                             </div>
 
                             <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
-                                <img alt="IMG-BENNER" src="assets/img/brand/Referanslar.PNG"
+                                <img alt="IMG-BENNER" src="assets/img/brand/uretim.PNG"
                                      style="width: 320%; border: inset;">
                             </div>
                             <div class="row align-items-center py-4">
@@ -221,7 +221,7 @@
                             </div>
                             <div class="row align-items-center py-4"
                                  style="margin-left: 4%;font-size: x-large; font-weight: bolder;">
-                                MEVCUT REFERANSLAR
+                                MEVCUT ÜRETİM FOTOĞRAFLARI
                             </div>
                             <!-- Table -->
                             <div class="table-responsive">
@@ -230,14 +230,14 @@
                                     <tr>
                                         <th class="sort" data-sort="name" scope="col">NO</th>
                                         <th class="sort" data-sort="budget" scope="col">GÖRSEL</th>
-                                        <th class="sort" data-sort="status" scope="col">FİRMA ADI</th>
+                                        <th class="sort" data-sort="status" scope="col">ÜRETİM BAŞLIĞI</th>
                                         <th scope="col">AÇIKLAMA</th>
                                         <th scope="col">KALDIR</th>
 
 
                                     </tr>
                                     </thead>
-                                    <tbody id="referanceList">
+                                    <tbody id="productList">
 
                                     </tbody>
                                 </table>
@@ -271,7 +271,7 @@
 <!-- Argon JS -->
 <script src="assets/js/argon.js?v=1.2.0"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/referances.js"></script>
+<script src="assets/js/product.js"></script>
 <script src="assets/js/globalFunction.js"></script>
 <script src="../-config.js"></script>
 

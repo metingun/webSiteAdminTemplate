@@ -29,5 +29,10 @@ function updateContactPage() {
         "facebook": inputFacebook
     };
 
-    postModel(url+"/contact/updateData",requestData);
+    if(postModel(url+"/contact/updateData",requestData).code===200){
+        alert("Değişiklikler kaydedildi...");
+        location.href=""+urlAdminFrontend+"/contact.html";
+    } else {
+        alert("Hata gerçekleşti !!!");
+    }
 }

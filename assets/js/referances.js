@@ -37,9 +37,15 @@ function createReferance() {
     };
 
     var post=postModel(url+"/referance/saveData",requestData);
-    document.getElementById("referanceList").innerHTML+=htmlTemplate(post.data);
+    if (post.code===200){
+        document.getElementById("referanceList").innerHTML+=htmlTemplate(post.data);
 
-    document.getElementById("inputPic1").value="";
-    document.getElementById("inputCompanyName").value="";
-    document.getElementById("inputComment").value="";
+        document.getElementById("inputPic1").value="";
+        document.getElementById("inputCompanyName").value="";
+        document.getElementById("inputComment").value="";
+        alert("Referans başarıyla eklendi...");
+    }
+    else{
+        alert("Aynı isimde referans mevcut !!! Lütfen eklediğiniz referansı sayfayı yenileyip siliniz...")
+    }
 }

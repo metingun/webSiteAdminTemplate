@@ -64,13 +64,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">
+              <a class="nav-link" href="certificates.html">
                 <i class="ni ni-single-copy-04 text-primary"></i>
                 <span class="nav-link-text">Sertifikalar</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">
+              <a class="nav-link" href="product.html">
                 <i class="ni ni-shop text-orange"></i>
                 <span class="nav-link-text">Üretim</span>
               </a>
@@ -127,7 +127,7 @@
                 <div class="media align-items-center">
 
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../images/icons/world.svg">
+                    <i class="far fa-user"></i>
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">Bazmen Admin</span>
@@ -162,10 +162,12 @@
                 <table class="table align-items-center table-flush" style="border: solid;">
                   <thead class="thead-light">
                   <tr>
-                    <th class="sort" data-sort="budget" scope="col">GÖRSEL</th>
+                    <th class="sort" data-sort="budget" scope="col">GÖRSEL 1</th>
+                    <th class="sort" data-sort="budget" scope="col">GÖRSEL 2</th>
                     <th class="sort" data-sort="status" scope="col">ÜRÜN ADI</th>
                     <th scope="col">AÇIKLAMA</th>
-                    <th scope="col">ÜRÜN ÖZELLİKLERİ</th>
+                    <th scope="col">ÖZELLİKLER</th>
+                    <th scope="col">CİNSİYET</th>
 
                   </tr>
                   </thead>
@@ -174,7 +176,9 @@
                     <td class="budget">
                       <input id="inputPic1" class="d-flex align-items-center newProperty"/>
                     </td>
-
+                    <td>
+                      <input id="inputPic2" class="d-flex align-items-center newProperty"/>
+                    </td>
                     <td class="budget">
                       <input id="inputProductName" class="d-flex align-items-center newProperty"/>
                     </td>
@@ -187,6 +191,13 @@
                       <input id="inputProductProperties" class="d-flex align-items-center newProperty"/>
                     </td>
 
+                    <td>
+                      <select id="inputSex" style="width: 127%;">
+                        <option value="Woman">Kadın</option>
+                        <option value="Man">Erkek</option>
+                        <option value="Kids">Çocuk</option>
+                      </select>
+                    </td>
                   </tr>
                   </tbody>
                 </table>
@@ -204,11 +215,12 @@
                   <table class="table align-items-center table-flush">
                     <thead class="thead-light">
                     <tr>
-                      <th class="sort" data-sort="name" scope="col">NO</th>
-                      <th class="sort" data-sort="budget" scope="col">GÖRSEL</th>
+                      <th class="sort" data-sort="budget" scope="col">GÖRSEL 1</th>
+                      <th class="sort" data-sort="budget" scope="col">GÖRSEL 2</th>
                       <th class="sort" data-sort="status" scope="col">ÜRÜN ADI</th>
                       <th scope="col">AÇIKLAMA</th>
-                      <th scope="col">ÜRÜN ÖZELLİKLERİ</th>
+                      <th scope="col">ÖZELLİKLER</th>
+                      <th scope="col">CİNSİYET</th>
                       <th scope="col">KALDIR</th>
 
                     </tr>
@@ -247,7 +259,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/collection.js"></script>
   <script src="assets/js/globalFunction.js"></script>
-  <script src="../config.js"></script>
+  <script src="../-config.js"></script>
 
 </body>
 
