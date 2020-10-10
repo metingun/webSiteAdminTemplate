@@ -9,6 +9,7 @@ function htmlTemplate(responseData) {
         '<td class="budget">'+responseData.pic1.substring(0, 25)+'</td>' +
         '<td class="constantProp">'+responseData.productTitle.substring(0, 25)+'</td>' +
         '<td>'+responseData.comment.substring(0, 20)+'</td>' +
+        '<td>'+responseData.language+'</td>' +
         '<td><button class="btn btn-info btn-lg" onclick="deleteProduct(' + responseData.id + ')">' +
         '<i class="far fa-trash-alt"></i></button></td>' +
         '</tr>';
@@ -29,11 +30,13 @@ function createProduct() {
     var pic1=document.getElementById("inputPic1").value;
     var productTitle=document.getElementById("inputProductTitle").value;
     var comment=document.getElementById("inputComment").value;
+    var inputLang=document.getElementById("inputLang").value;
 
     var requestData={
         "pic1": pic1,
         "productTitle": productTitle,
-        "comment": comment
+        "comment": comment,
+        "language": inputLang
     };
 
     var post=postModel(url+"/product/saveData",requestData);

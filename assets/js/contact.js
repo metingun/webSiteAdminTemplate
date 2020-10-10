@@ -2,6 +2,7 @@ function contactPageAdmin() {
     var response=getModel(url+"/contact/getAllData");
 
     setValueById("address",response.data.address.substring(0, 40));
+    setValueById("addressEn",response.data.addressEn.substring(0, 40));
     setValueById("mail",response.data.mail.substring(0, 40));
     setValueById("phoneNumber",response.data.phoneNumber.substring(0, 40));
     setValueById("fax",response.data.fax.substring(0, 40));
@@ -14,6 +15,7 @@ function updateContactPage() {
     var response=getModel(url+"/contact/getAllData");
 
     var inputAddress=(getValueById("inputAddress")==="")?response.data.address:getValueById("inputAddress");
+    var inputAddressEn=(getValueById("inputAddressEn")==="")?response.data.address:getValueById("inputAddressEn");
     var inputMail=(getValueById("inputMail")==="")?response.data.mail:getValueById("inputMail");
     var inputPhoneNumber=(getValueById("inputPhoneNumber")==="")?response.data.phoneNumber:getValueById("inputPhoneNumber");
     var inputFax=(getValueById("inputFax")==="")?response.data.fax:getValueById("inputFax");
@@ -22,6 +24,7 @@ function updateContactPage() {
 
     var requestData={
         "address": inputAddress,
+        "addressEn": inputAddressEn,
         "mail": inputMail,
         "phoneNumber": inputPhoneNumber,
         "fax": inputFax,

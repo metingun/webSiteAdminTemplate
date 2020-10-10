@@ -11,6 +11,7 @@ function htmlTemplate(responseData) {
         '<td>' + responseData.comment.substring(0, 10) + '</td>' +
         '<td>' + responseData.productProperties.substring(0, 15) + '</td>' +
         '<td>' + responseData.sex + '</td>' +
+        '<td>' + responseData.language + '</td>' +
         '<td><button class="btn btn-info btn-lg" onclick="deleteCollection(' + responseData.id + ')">' +
         '<i class="far fa-trash-alt"></i></button></td>' +
         '</tr>';
@@ -36,6 +37,7 @@ function createCollection() {
     var comment=document.getElementById("inputComment").value;
     var productProperties=document.getElementById("inputProductProperties").value;
     var inputSex=document.getElementById("inputSex").value;
+    var inputLang=document.getElementById("inputLang").value;
 
     var requestData={
         "pic1": pic1,
@@ -43,7 +45,8 @@ function createCollection() {
         "comment": comment,
         "productProperties": productProperties,
         "pic2": pic2,
-        "sex": inputSex
+        "sex": inputSex,
+        "language": inputLang
     };
 
     var post=postModel(url+"/collection/saveData",requestData);

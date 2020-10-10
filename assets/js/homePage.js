@@ -7,13 +7,18 @@ function homePageAdmin() {
     setValueById("bannerTitle",response.data.bannerTitle);
     setValueById("bannerSubtitle",response.data.bannerSubtitle);
     setValueById("bannerButtonText",response.data.bannerButtonText);
+    setValueById("bannerTitleEn",response.data.bannerTitleEn);
+    setValueById("bannerSubtitleEn",response.data.bannerSubtitleEn);
+    setValueById("bannerButtonTextEn",response.data.bannerButtonTextEn);
 
     setValueById("title1",response.data.title1);
+    setValueById("title1En",response.data.title1En);
     setValueById("pic1",response.data.pic1.substring(0, 40));
     setValueById("pic2",response.data.pic2.substring(0, 40));
     setValueById("pic3",response.data.pic3.substring(0, 40));
 
     setValueById("newSeasonTitle",response.data.newSeasonTitle);
+    setValueById("newSeasonTitleEn",response.data.newSeasonTitleEn);
     setValueById("newSeasonPic1",response.data.newSeasonPic1.substring(0, 40));
     setValueById("newSeasonPic2",response.data.newSeasonPic2.substring(0, 40));
     setValueById("newSeasonPic3",response.data.newSeasonPic3.substring(0, 40));
@@ -34,10 +39,15 @@ function updateHomePage() {
     var inputBannerSubtitle=(getValueById("inputBannerSubtitle")==="")?response.data.bannerSubtitle:getValueById("inputBannerSubtitle");
     var inputBannerButtonText=(getValueById("inputBannerButtonText")==="")?response.data.bannerButtonText:getValueById("inputBannerButtonText");
     var inputTitle1=(getValueById("inputTitle1")==="")?response.data.title1:getValueById("inputTitle1");
+    var inputBannerTitleEn=(getValueById("inputBannerTitleEn")==="")?response.data.bannerTitle:getValueById("inputBannerTitleEn");
+    var inputBannerSubtitleEn=(getValueById("inputBannerSubtitleEn")==="")?response.data.bannerSubtitle:getValueById("inputBannerSubtitleEn");
+    var inputBannerButtonTextEn=(getValueById("inputBannerButtonTextEn")==="")?response.data.bannerButtonText:getValueById("inputBannerButtonTextEn");
+    var inputTitle1En=(getValueById("inputTitle1En")==="")?response.data.title1:getValueById("inputTitle1En");
     var inputPic1=(getValueById("inputPic1")==="")?response.data.pic1:getValueById("inputPic1");
     var inputPic2=(getValueById("inputPic2")==="")?response.data.pic2:getValueById("inputPic2");
     var inputPic3=(getValueById("inputPic3")==="")?response.data.pic3:getValueById("inputPic3");
     var inputNewSeasonTitle=(getValueById("inputNewSeasonTitle")==="")?response.data.newSeasonTitle:getValueById("inputNewSeasonTitle");
+    var inputNewSeasonTitleEn=(getValueById("inputNewSeasonTitleEn")==="")?response.data.newSeasonTitle:getValueById("inputNewSeasonTitleEn");
     var inputNewSeasonPic1=(getValueById("inputNewSeasonPic1")==="")?response.data.newSeasonPic1:getValueById("inputNewSeasonPic1");
     var inputNewSeasonPic2=(getValueById("inputNewSeasonPic2")==="")?response.data.newSeasonPic2:getValueById("inputNewSeasonPic2");
     var inputNewSeasonPic3=(getValueById("inputNewSeasonPic3")==="")?response.data.newSeasonPic3:getValueById("inputNewSeasonPic3");
@@ -54,11 +64,16 @@ function updateHomePage() {
             'bannerTitle': inputBannerTitle,
             'bannerSubtitle': inputBannerSubtitle,
             'bannerButtonText': inputBannerButtonText,
+            'bannerTitleEn': inputBannerTitleEn,
+            'bannerSubtitleEn': inputBannerSubtitleEn,
+            'bannerButtonTextEn': inputBannerButtonTextEn,
             'title1': inputTitle1,
+            'title1En': inputTitle1En,
             'pic1': inputPic1,
             'pic2': inputPic2,
             'pic3': inputPic3,
             'newSeasonTitle': inputNewSeasonTitle,
+            'newSeasonTitleEn': inputNewSeasonTitleEn,
             'newSeasonPic1': inputNewSeasonPic1,
             'newSeasonPic2': inputNewSeasonPic2,
             'newSeasonPic3': inputNewSeasonPic3,
